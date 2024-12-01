@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Рецептики</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/app.js"defer></script>
+</head>
+
+
+    
+
+<body>
+    <div class="slider-container">
+        <div class="slider">
+            <div class="slide"><img src="img/1.png" alt="Image 1"></div>
+            <div class="slide"><img src="img/2.png" alt="Image 2"></div>
+            <div class="slide"><img src="img/3.png" alt="Image 3"></div>
+        </div>
+        <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+        <button class="next" onclick="changeSlide(1)">&#10095;</button>
+    </div>
+
+    <header class="hero-section">          
+        <div class="conteiner">
+            <div class="main-head">
+                <h1 class="main-title">Выбери рецепт</h1>
+                <h1 class="main-title1">на любой день</h1>
+                <a href="#link" class="varr">Посмотреть варианты</a>
+            </div>
+        </div>
+    </header>
+    
+    <div class="header-info">
+        <div class="i">
+            <p>Здесь можно найти несколько рецептов на каждый приём пищи</p>
+        </div>
+      </div>
+
+       
+        <div class="portfolio">
+            <div class="container">
+                <div id = "link">
+                    <section class="gallery">
+                        <li><a href = "1.html" class="gallery-left">
+                            <h2>Завтрак</h2>
+                            <img class="gallery__item" src="img/завтрак.png" alt="Alt">
+                        </a></li>
+                    
+                        <li><a href = "2.html" class="gallery-center">
+                            <h2>Обед</h2>
+                            <img class="gallery__item" src="img/обед.png" alt="Alt">
+                        </a></li>
+
+                        <li><a href = "3.html" class="gallery-right">
+                            <h2>Ужин</h2>
+                            <img class="gallery__item" src="img/ужин.png" alt="Alt">
+                        </a></li>
+                    </section>
+
+
+                </div>
+            </div>
+        </div>
+        <button id="scrollToTopButton">обратно</button>
+
+<div class ="time2">
+    <script>
+        function time () {
+        date = new Date(),
+        h = date.getHours(),
+        m = date.getMinutes(),
+        s = date.getSeconds(),
+        
+        h = (h < 10) ? '0' + h : h,
+        m = (m < 10) ? '0' + m : m,
+        s = (s < 10) ? '0' + s : s;
+        
+        hours  = document.getElementById("id_H");
+        minutes = document.getElementById("id_M");
+        seconds = document.getElementById("id_S");
+                    
+        hours.innerHTML = h;   
+        minutes.innerHTML = m;
+        seconds.innerHTML = s;
+        };
+            
+    </script>
+        <script>setInterval(time, 1000);</script>
+            
+        <div id="time" style="font-weight: bold;"> 
+        <span id="id_H" style="color: rgb(190, 39, 145);"></span> : <span id="id_M" style="color: rgb(117, 66, 183);"></span> : <span id="id_S" style="color:rgb(190, 39, 145);" ></span>    
+        </div> 
+    </div> 
+
+</body>
+</html> 
